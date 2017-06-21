@@ -10,7 +10,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='senti-py',
-    version='1.0.0',
+    version='1.0.1',
     description='A sentiment analysis classifier in spanish.',
     long_description=long_description,
     url='https://github.com/aylliote/senti-py',
