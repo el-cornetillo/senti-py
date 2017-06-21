@@ -26,20 +26,20 @@ import marisa_trie
 
 ## DEFINE CONSTANTS
 
-pathsData = { 'SENSACINE_SERIES' : "Classifier/dataset/sensaCineSerie.txt",
-              'SENSACINE_MOVIES' : "Classifier/dataset/sensaCineMovie.txt",
-              'PEDIDOS_YA' : "Classifier/dataset/pedidosYa.txt",
-              'TRIP_ADVISOR_HOTEL' : "Classifier/dataset/tripAdvisorHotel.txt",
-              'TRIP_ADVISOR_RESTAURANT' : "Classifier/dataset/tripAdvisorRestaurant.txt",
-              'TRIP_ADVISOR_ATTRACTION' : "Classifier/dataset/tripAdvisorAttraction.txt",
-              'OPEN_CINE' : "Classifier/dataset/openCine.txt",
-              'QUEJAS_ONLINE' : "Classifier/dataset/quejas.txt",
-              'APESTAN' : "Classifier/dataset/apestan.txt",
-              'BAD_TWEETS' : "Classifier/dataset/badTweets.txt",
-              'GOOD_TWEETS' : "Classifier/dataset/goodTweets.txt",
-              'TASS_DATASET' : "Classifier/dataset/tassTweets.txt",
-              'MERCADOLIBRE_POS' : "Classifier/dataset/MercadoPos.txt",
-              'MERCADOLIBRE_NEG' : "Classifier/dataset/MercadoNeg.txt" }
+pathsData = { 'SENSACINE_SERIES' : "classifier/data/sensaCineSerie.txt",
+              'SENSACINE_MOVIES' : "classifier/data/sensaCineMovie.txt",
+              'PEDIDOS_YA' : "classifier/data/pedidosYa.txt",
+              'TRIP_ADVISOR_HOTEL' : "classifier/data/tripAdvisorHotel.txt",
+              'TRIP_ADVISOR_RESTAURANT' : "classifier/data/tripAdvisorRestaurant.txt",
+              'TRIP_ADVISOR_ATTRACTION' : "classifier/data/tripAdvisorAttraction.txt",
+              'OPEN_CINE' : "classifier/data/openCine.txt",
+              'QUEJAS_ONLINE' : "classifier/data/quejas.txt",
+              'APESTAN' : "classifier/data/apestan.txt",
+              'BAD_TWEETS' : "classifier/data/badTweets.txt",
+              'GOOD_TWEETS' : "classifier/data/goodTweets.txt",
+              'TASS_DATASET' : "classifier/data/tassTweets.txt",
+              'MERCADOLIBRE_POS' : "classifier/data/MercadoPos.txt",
+              'MERCADOLIBRE_NEG' : "classifier/data/MercadoNeg.txt" }
 
 MERCADO_RATIO = 100000
 dataDelimiter = '__dataDelimiter__'
@@ -53,9 +53,9 @@ dirtyJaja = re.compile(r'[ja]{5,}')
 dirtyJeje = re.compile(r'[je]{5,}')
 numbers = re.compile(r'[0-9]+')
 uglySeparator = 'THIS-IS-A-SEPARATOR'
-pathExpressions = 'Classifier/dataset/expressions.txt' ## XXX : to fill
+pathExpressions = 'classifier/data/expressions.txt' ## XXX : to fill
 exps = set([e.split()[0] for e in open(pathExpressions, encoding='utf8').readlines()])
-pathConjug = "Classifier/dataset/dictConjug.json" ## XXX : to fill
+pathConjug = "classifier/data/dictConjug.json" ## XXX : to fill
 
 with open(pathConjug, 'r') as f:
     dictConjug = json.load(f)
