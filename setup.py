@@ -38,9 +38,9 @@ setup(
             },
     data_files=[('data', ['classifier/data/sensaCineSerie.txt', 'classifier/data/sensaCineMovie.txt',
                             'classifier/data/pedidosYa.txt', 'classifier/data/tripAdvisorHotel.txt',
-                            'classifier/data/tripAdvisorRestaurant.txt', 'classifier/data/tripAdvisorAttraction.txt',
+                            'classifier/data/tripAdvisorRestaurant.txt', 'classifier/data/tripAdvisorAttraction.rar',
                             'classifier/data/openCine.txt', 'classifier/data/quejas.txt', 
-                            'classifier/data/apestan.txt', 'classifier/data/badTweets.txt',
+                            'classifier/data/apestan.rar', 'classifier/data/badTweets.txt',
                         'classifier/data/goodTweets.txt', 'classifier/data/tassTweets.txt',
-                        'classifier/data/MercadoPos.txt', 'classifier/data/MercadoNeg.txt' ])]
+                        'classifier/data/MercadoPos.rar', 'classifier/data/MercadoNeg.txt' ])]
 )
