@@ -90,8 +90,8 @@ pathModel = 'sentiment_pipeline.pkl'
 
 ## Constants Prediction
 decayRate = 8
-GOOD_BABY = 'Classifier/img/good_baby.jpg'
-BAD_BABY = 'Classifier/img/bad_baby.jpg'
+GOOD_BABY = 'classifier/img/good_baby.jpg'
+BAD_BABY = 'classifier/img/bad_baby.jpg'
 
 ## GET DATA FUNCTION
 
