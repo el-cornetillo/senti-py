@@ -4,23 +4,48 @@ A sentiment Analysis classifier in spanish
 Author : Elliot Hofman
 
 This is a package to perform sentiment analysis in spanish.
+It's built on top of scikit-learn and NLTK.
+Marisa-trie is used to make the final trained model.pkl memory-efficient ( from 150Ko to 28Ko!)
+
+## INSTALLATION
+
+It's as simple as : 
+
+1/ Open terminal
+
+2/ Run 'pip install spanish_sentiment_analysis'
+
+## USAGE
+
+See the demo_classifier.ipynb notebook to see how to use the classifier.
+
 
 ## THE DATA
 
 The model is fed data crawled from various websites : 
-Trip Advisor, PedidosYa, Apestan, QuejasOnline, MercadoLibre, SensaCine, OpenCine, TASS, Twitter
+Trip Advisor
+PedidosYa
+Apestan
+QuejasOnline
+MercadoLibre
+SensaCine
+OpenCine
+TASS
+Twitter
 (See the files under /crawlers if interested)
+This represents roughly 1M samples.
 
 ## THE MODEL
 
-The model is a pipeline that includes : 
+The model is a simple pipeline that includes : 
+
 - A vectorizer : go from the text/string representation of the comment to a vectorized representation.
 				This is done with a TfIdfVectorizer
 - A feature Selector : The vectorizer will output a n_samples*n_features very sparse matrix (scipy sparse 					matrices are already used by the sklean algorithm). This will reduce the number n_features, 				checking weather a feature is relevant or not.
 - A classifier : The model used is a Multinomial Naive Bayes, which performs really well for text 
 				classification.
 
-The parameters and hyper-parameters of this pipeline are found by the use of a GridSearch K - cross validation with K = 3
+The parameters and hyper-parameters of this pipeline are found by the use of a GridSearch K - cross validation with K = 10
 
 ## THE PREPROCESSING
 
@@ -58,8 +83,6 @@ The prediction is calculated with a few rules:
 	and the same barycenter method is used so that the final prediction will predict the same thing as the important word placed after the 'muy'.
 	This is used because the comment might say a lot of things ('bla balab blalal') and the classifier could eventually get confused (if there was some piece of irony, a too big quantity of unknown words, ...), but if the comment started by ('Muy recomendable') anyway it will know the comment is good.
 - The comments are processed the same way the training data was prepared, and the words that are not in the vocabulary are removed, to reduce the noise that they bring to the comment.
-
-## MORE DOCUMENTATION ON USAGE COMING SOON ...
 
 
 
