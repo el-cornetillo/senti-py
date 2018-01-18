@@ -1,7 +1,7 @@
 from .constants import *
-import spacy
-import es_core_web_md
-nlp = es_core_web_md.load()
+#import spacy
+#import es_core_web_md
+#nlp = es_core_web_md.load()
 from nltk import word_tokenize
 
 def processPero(x):
