@@ -4,7 +4,9 @@ A sentiment Analysis classifier in spanish
 Author : Elliot Hofman
 
 This is a package to perform sentiment analysis in spanish.
+
 It's built on top of scikit-learn and NLTK.
+
 Marisa-trie is used to make the final trained model.pkl memory-efficient ( from 150Ko to 28Ko!)
 
 ## INSTALLATION
@@ -25,13 +27,21 @@ See the demo_classifier.ipynb notebook to see how to use the classifier.
 The model is fed data crawled from various websites : 
 Trip Advisor
 PedidosYa
+
 Apestan
+
 QuejasOnline
+
 MercadoLibre
+
 SensaCine
+
 OpenCine
+
 TASS
+
 Twitter
+
 (See the files under /crawlers if interested)
 This represents roughly 1M samples.
 
