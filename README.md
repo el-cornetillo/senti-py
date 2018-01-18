@@ -25,7 +25,9 @@ See the demo_classifier.ipynb notebook to see how to use the classifier.
 ## THE DATA
 
 The model is fed data crawled from various websites : 
+
 Trip Advisor
+
 PedidosYa
 
 Apestan
