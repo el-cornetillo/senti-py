@@ -82,18 +82,30 @@ All the comments are preprocessed before the training is done :
 
 The prediction is calculated with a few rules:
 - If 'pero' is found in the comment to classify,
+
 	preScore = prediction(sentence before the 'pero')
+	
 	postScore = prediction(sentence before the 'pero')
 
-	and a barycenter of those two quantities is calculated ((decayRate-t)*preScore + t*postScore)/decayRate
+	and a barycenter of those two quantities is calculated 
+	
+	((decayRate-t)*preScore + t*postScore)/decayRate
+	
+	
 	so that the score remains from the same side of 0.5 than postScore
-	This because the comments might say something kind of good, and then finish 'pero ...' and say something kind of good. In this case, usually the global sentiment of the comment is carried by the second part of the phrase.
+	
+	This because the comments might say something kind of good, and then finish 'pero ...' and say something kind of bad. In this case, usually the global sentiment of the comment is carried by the second part of the phrase.
+	
 - If 'muy' is found in the comment to classify:
+
 	importantScore = prediction(next word just after 'muy' if that word is an adjective)
+	
 	score = globalScore of the sentence
 
 	and the same barycenter method is used so that the final prediction will predict the same thing as the important word placed after the 'muy'.
+	
 	This is used because the comment might say a lot of things ('bla balab blalal') and the classifier could eventually get confused (if there was some piece of irony, a too big quantity of unknown words, ...), but if the comment started by ('Muy recomendable') anyway it will know the comment is good.
+	
 - The comments are processed the same way the training data was prepared, and the words that are not in the vocabulary are removed, to reduce the noise that they bring to the comment.
 
 
