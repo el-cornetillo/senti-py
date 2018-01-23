@@ -1,5 +1,5 @@
 # senti-py
-A sentiment Analysis classifier in spanish
+A pre-trained sentiment Analysis classifier in spanish
 
 Author : Elliot Hofman
 
