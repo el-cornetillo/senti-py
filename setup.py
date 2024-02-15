@@ -15,8 +15,7 @@ setup(
     long_description=long_description,
     url='https://github.com/aylliote/senti-py',
     download_url='https://github.com/aylliote/senti-py/archive/master.zip',
-    author='Elliot Hofman',
-    author_email='elliot.hofman@gmail.com',
+    author='Elliot',
     license='Sondeos',
     classifiers=[
         'Development Status :: 4 - Beta',
