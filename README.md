@@ -1,7 +1,7 @@
 # senti-py
 A pre-trained sentiment Analysis classifier in spanish
 
-Author : Elliot Hofman
+Author : Elliot
 
 This is a package to perform sentiment analysis in spanish.
 
